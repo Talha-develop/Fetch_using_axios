@@ -31,8 +31,8 @@ const UsersList = () => {
       <table className="w-full border-collapse border">
         <thead>
           <tr>
-            <th className="border p-2">User ID</th>
-            <th className="border p-2">Title</th>
+            <th className="border p-2 text-2xl">User ID</th>
+            <th className="border p-2 text-2xl">Title</th>
           </tr>
         </thead>
         <tbody>
@@ -43,8 +43,8 @@ const UsersList = () => {
                 user.id % 3 === 0 ? "bg-blue-300" : "bg-green-300"
               }`}
             >
-              <td className="border p-2">{user.id}</td>
-              <td className="border p-2">{user.title}</td>
+              <td className="border p-2 text-center text-xl">{user.id}</td>
+              <td className="border p-2 text-xl">{user.title}</td>
             </tr>
           ))}
         </tbody>

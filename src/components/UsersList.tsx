@@ -28,19 +28,27 @@ const UsersList = () => {
       <h1 className="text-3xl text-gray-700 text-center pt-6 pb-4">
         users List
       </h1>
-      <ul>
-        {users.map((user: any) => (
-          <li
-            key={user.id}
-            className={`mb-2 border-b-2 p-6 ${
-              user.id % 3 === 0 ? "bg-blue-300" : "bg-green-300"
-            }`}
-          >
-            <b> User's ID: </b> {user.id} <br />
-            <b> Title: </b> {user.title}
-          </li>
-        ))}
-      </ul>
+      <table className="w-full border-collapse border">
+        <thead>
+          <tr>
+            <th className="border p-2">User ID</th>
+            <th className="border p-2">Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user: any) => (
+            <tr
+              key={user.id}
+              className={`${
+                user.id % 3 === 0 ? "bg-blue-300" : "bg-green-300"
+              }`}
+            >
+              <td className="border p-2">{user.id}</td>
+              <td className="border p-2">{user.title}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
